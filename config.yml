@@ -1,0 +1,8 @@
+# Configuration file for stock picker
+'endpoint': 'https://rapidapi.p.rapidapi.com/market/v2/get-quotes'
+'host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
+'params':
+        'symbols': 'AAPL,AFI,IBM'
+        'region': 'US'
+'api_key': ''
+'output_file': 'get_quotes.json'
