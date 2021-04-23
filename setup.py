@@ -1,3 +1,4 @@
+# Setup module for stock_picker package.
 import setuptools
 
 with open("README.md", "r") as fh:
