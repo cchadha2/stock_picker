@@ -10,7 +10,5 @@ setuptools.setup(
     author_email="chiragchadhairl@gmail.com",
     description="Stock picker table",
     packages=setuptools.find_packages(),
-    install_requires=["pandas",
-                      "requests",
-                      "pyyaml"]
+    install_requires=["requests"]
 )
