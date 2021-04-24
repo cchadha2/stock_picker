@@ -8,6 +8,15 @@ class StockInfo:
     def __init__(self, symbol):
         self.symbol = symbol
 
+    def __len__(self):
+        return len(self.__dict__)
+
+    def __iter__(self):
+        return iter(self.__dict__)
+
+    def __getitem__(self, key):
+        return self.__dict__[key]
+
 
 class Quote(StockInfo):
     def __init__(self, price, **kwargs):
