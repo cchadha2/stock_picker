@@ -1,4 +1,4 @@
-from .stock_info import QuoteGetter
+from stock_picker.stock_info import QuoteGetter
 
 GETTER_LIBRARY = {
     "quote": QuoteGetter,

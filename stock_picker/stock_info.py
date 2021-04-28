@@ -81,11 +81,3 @@ class QuoteGetter(StockInfoGetter):
     def __repr__(self):
         return f"{self.__class__.__name__}(params={self.params})"
 
-
-if __name__ == "__main__":
-    params = {"region": "US", "symbols": "AMD,IBM,AAPL"}
-
-    getter = QuoteGetter(api_key=os.environ.get("API_KEY"), params=params)
-    quotes = getter.get_info()
-
-    print(quotes)
