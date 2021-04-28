@@ -8,15 +8,12 @@ class StockTable:
         self.root = Tk()
         self.refresh_time = refresh_time
         self.info_getter = stock_getter
+
         self._info = stock_getter.get_info()
         self._create_table()
 
-    @property
-    def info(self):
-        return self.info_getter.update_info(self._info)
-
     def _create_table(self):
-        info = self.info
+        info = self.info_getter.update_info(self._info)
 
         for idx, header in enumerate(info[0]):
             entry = Entry(self.root, width=20, fg='blue',
