@@ -1,15 +1,13 @@
 import os
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
 
 import requests
 
 
+@dataclass
 class StockInfo:
-    def __init__(self, symbol):
-        self.symbol = symbol
-
-    def __len__(self):
-        return len(self.__dict__)
+    symbol: str
 
     def __iter__(self):
         return iter(self.__dict__)
@@ -18,13 +16,9 @@ class StockInfo:
         return self.__dict__[key]
 
 
+@dataclass
 class Quote(StockInfo):
-    def __init__(self, price, **kwargs):
-        super().__init__(**kwargs)
-        self.price = price
-
-    def __repr__(self):
-        return f"{self.__class__.__name__}(symbol={self.symbol}, price={self.price})"
+    price: float
 
 
 class StockInfoGetter(ABC):
